@@ -8,3 +8,8 @@ commands:
         name: 'workers:ansible:update'
         description: 'Update the production workers'
         prompt: 'time ansible-playbook worker.yml -i worker.inventory -u root -l ${host_groups}'
+        parameters:
+          host_groups:
+            name: the host groups
+            type: forrest_string
+            default: "worker,customer,fallback,timeout,ping,worker_daily,worker_japan,worker_daily_japan,crawler_default_japan,ping_japan"
