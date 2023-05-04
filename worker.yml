@@ -9,3 +9,8 @@ commands:
         description: 'Login into the worker'
         runnable: false
         prompt: 'docker exec -it worker_worker_1 /bin/bash'
+
+    worker-go-todocker:
+        name: 'worker:goto'
+        description: 'Go to the docker directory the worker is located'
+        prompt: 'cd /var/docker/worker/'
