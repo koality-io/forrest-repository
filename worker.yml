@@ -1,1 +1,9 @@
-# docker exec -it worker_worker_1 /bin/bash
+repository:
+    name: 'koality worker'
+    description: 'Commands needed for koality workers'
+    identifier: koality-worker
+commands:
+    worker-ssh:
+        name: 'worker:shell'
+        description: 'Login into the worker'
+        prompt: 'docker exec -it worker_worker_1 /bin/bash'
