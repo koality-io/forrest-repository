@@ -12,6 +12,7 @@ commands:
 
     worker-goto-docker:
         name: 'worker:goto'
+        runnable: false
         description: 'Go to the docker directory the worker is located'
         prompt: 'cd /var/docker/worker/'
 
