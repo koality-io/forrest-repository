@@ -10,7 +10,12 @@ commands:
         runnable: false
         prompt: 'docker exec -it worker_worker_1 /bin/bash'
 
-    worker-go-todocker:
+    worker-goto-docker:
         name: 'worker:goto'
         description: 'Go to the docker directory the worker is located'
         prompt: 'cd /var/docker/worker/'
+
+    worker-config-show:
+        name: 'worker:queue:config:show'
+        description: 'Show the queue config'
+        prompt: 'cat /var/docker/worker/config/queue.config'
