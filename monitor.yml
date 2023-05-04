@@ -8,3 +8,11 @@ commands:
         name: 'certs:wildcard:update'
         description: 'Update the wildcard domain certificated'
         prompt: 'sudo certbot certonly --manual -d *.${domainName} --agree-tos --no-bootstrap --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory'
+
+    queue-show-last:
+        name: 'queue:show:recent'
+        description: 'Show the recent entries of the queue'
+        prompt: 'tail -n ${numberOfResults} /var/log/leankoala/queue.log'
+        parameters:
+          numberOfResults:
+            default: 10
