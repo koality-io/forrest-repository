@@ -1,0 +1,11 @@
+repository:
+    name: 'koalityengine'
+    description: 'Commands needed for the KoalityEngine'
+    identifier: koalityengine
+    
+commands:
+    worker-ssh:
+        name: 'worker:shell'
+        description: 'Login into the worker'
+        runnable: false
+        prompt: 'docker exec -it worker_worker_1 /bin/bash'
