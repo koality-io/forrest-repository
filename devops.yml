@@ -1,11 +1,10 @@
 repository:
-    name: 'koality worker'
-    description: 'Commands needed for koality workers'
-    identifier: koality-worker
+    name: '360 devops'
+    description: 'Commands needed for 360 devops'
+    identifier: devops-360
     
 commands:
-    worker-ssh:
-        name: 'worker:shell'
-        description: 'Login into the worker'
-        runnable: false
-        prompt: 'docker exec -it worker_worker_1 /bin/bash'
+    update-prod-workers:
+        name: 'workers:ansible:update'
+        description: 'Update the production workers'
+        prompt: 'time ansible-playbook worker.yml -i worker.inventory -u root -l ${host_groups}'
