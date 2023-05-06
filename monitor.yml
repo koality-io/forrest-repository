@@ -9,7 +9,7 @@ commands:
         description: 'Update the wildcard domain certificated'
         prompt: 'sudo certbot certonly --manual -d *.${domainName} --agree-tos --no-bootstrap --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory'
         parameters:
-            domainName
+            domainName:
                 enum:
                  - "*.branch.koality.io"
 
