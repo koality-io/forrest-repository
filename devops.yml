@@ -15,8 +15,8 @@ commands:
             default: "worker,customer,fallback,timeout,ping,worker_daily,worker_japan,worker_daily_japan,crawler_default_japan,ping_japan"
 
     minimal-servers:
-        name: 'workers:ansible:update'
-        description: 'Update the production workers'
+        name: 'servers:install:minimal'
+        description: 'Install the minimal devops tools'
         prompt: 'time ansible-playbook ${ansible_file} -i ${inventory_file} -u root'
         parameters:
           ansible_file:
