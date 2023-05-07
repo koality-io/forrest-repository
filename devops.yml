@@ -13,3 +13,20 @@ commands:
             name: the host groups
             type: forrest_string
             default: "worker,customer,fallback,timeout,ping,worker_daily,worker_japan,worker_daily_japan,crawler_default_japan,ping_japan"
+
+    minimal-servers:
+        name: 'workers:ansible:update'
+        description: 'Update the production workers'
+        prompt: 'time ansible-playbook ${ansible_file} -i ${inventory_file} -u root'
+        parameters:
+          ansible_file:
+            name: The ansible file
+            type: forrest_string
+            enum:
+             - "dev_ops_minimal.yml"
+          inventory_file:
+            name: the ansible inventory groups
+            type: forrest_string
+            enum:
+             - "all.inventory"
+
