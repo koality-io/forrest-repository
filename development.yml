@@ -24,7 +24,7 @@ commands:
              - /var/www/tmp/client/
              - /tmp
         
-    client-create:
+    docker-shell:
         name: 'docker:shell'
         description: 'Login to the docker container'
         prompt: 'docker exec -it lk_monitor /bin/bash'
