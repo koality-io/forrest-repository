@@ -13,10 +13,10 @@ commands:
             name: The output format
             type: forrest_string
             enum:
-             - PHP
-             - JavaScriot
-             - TypeScript
-             - MarkDown
+             - php
+             - javascript
+             - typescript
+             - markdown
           output_dir:
             name: The output directory
             type: forrest_string
