@@ -6,7 +6,7 @@ repository:
 commands:
     client-create:
         name: 'client:create'
-        description: 'Install the minimal devops tools'
+        description: 'Create the KoalityEngine client.'
         prompt: 'php bin/console lean:api:client:create ${output_format} ${output_dir} -r "/kapi/v1/" --pathPrefix /'
         parameters:
           output_format:
@@ -24,3 +24,7 @@ commands:
              - /var/www/tmp/client/
              - /tmp
         
+    client-create:
+        name: 'docker:shell'
+        description: 'Login to the docker container'
+        prompt: 'docker exec -it lk_monitor /bin/bash'
