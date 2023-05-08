@@ -1,0 +1,26 @@
+repository:
+    name: '360 development'
+    description: 'Commands needed for 360 development'
+    identifier: develop-360
+    
+commands:
+    client-create:
+        name: 'client:create'
+        description: 'Install the minimal devops tools'
+        prompt: 'php bin/console lean:api:client:create ${output_format} ${output_dir} -r "/kapi/v1/" --pathPrefix /'
+        parameters:
+          output_format:
+            name: The output format
+            type: forrest_string
+            enum:
+             - PHP
+             - JavaScriot
+             - TypeScript
+             - MarkDown
+          output_dir:
+            name: The output directory
+            type: forrest_string
+            enum:
+             - /var/www/tmp/client/
+             - /tmp
+        
