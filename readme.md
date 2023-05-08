@@ -16,3 +16,9 @@ forrest repository:register https://raw.githubusercontent.com/koality-io/forrest
 ```shell
 forrest repository:register https://raw.githubusercontent.com/koality-io/forrest-repository/main/devops.yml
 ```
+
+## Register developement repository
+
+```shell
+forrest repository:register https://raw.githubusercontent.com/koality-io/forrest-repository/main/development.yml
+```
