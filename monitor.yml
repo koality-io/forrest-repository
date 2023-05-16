@@ -13,6 +13,7 @@ commands:
             domainName:
                 enum:
                  - "branch.koality.io"
+                 - "api.branches.koalityengine.com"
 
     queue-show-last:
         name: 'queue:show:recent'
