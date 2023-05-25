@@ -22,3 +22,20 @@ commands:
         parameters:
           numberOfResults:
             default: 10
+            
+    'auth:application:create':
+        name: 'application:create'
+        description: 'Create a new application in the KoalityEngine'
+        runnable: false
+        prompt: 'php /var/www/auth.koalityengine.com/current/bin/console application:create ${application_identifier} "${application_name}" "${environment}}"'
+        parameters:
+            application_identifier:
+                description: "The application identifier. Must be the same as in Nixstats and can only contain numbers and lower-case letters."
+                constraints:
+                    - identifier
+            application_name:
+                description: "The application name. Can be changed afterwards."
+            environment:
+                enum:
+                    production: https://api.cluster1.koalityengine.com/
+                    stage: https://api.stage.koalityengine.com/
