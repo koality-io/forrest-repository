@@ -33,6 +33,7 @@ commands:
                 description: "The application identifier. Must be the same as in Nixstats and can only contain numbers and lower-case letters."
                 constraints:
                     - identifier
+                    - not-empty
             application_name:
                 description: "The application name. Can be changed afterwards."
             environment:
